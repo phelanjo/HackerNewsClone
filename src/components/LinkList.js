@@ -6,7 +6,7 @@ class LinkList extends Component {
     const linksToRender = [
       {
         id: '1',
-        description: 'Prisma turns your database into a GraphQL API 😎'
+        description: 'Prisma turns your database into a GraphQL API 😎',
         url: 'https://www.prismagraphql.com',
       },
       {
