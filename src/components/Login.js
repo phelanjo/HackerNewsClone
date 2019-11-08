@@ -61,7 +61,7 @@ class Login extends Component {
             onCompleted={data => this._confirm(data)}
           >
             {mutation => (
-              <div className="pointer mr2 button" onClick={() => this._confirm()}>
+              <div className="pointer mr2 button" onClick={mutation}>
                 {login ? 'login' : 'create account'}
               </div>              
             )}
@@ -77,7 +77,7 @@ class Login extends Component {
     )
   }
 
-  _confirm = async () => {
+  _confirm = async data => {
     const { token } = this.state.login ? data.login : data.signup
     this._saveUserData(token)
     this.props.history.push(`/`)
